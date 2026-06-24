@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Event — Special Events Portal — D'Ette Services</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .sidebar { background: #2A1A18; }
+  .sidebar__brand .wordmark { font-size: 22px; }
+  .sidebar__brand .eyebrow { color: #C49A8A; }
+  .sidebar__nav a .num { color: #C49A8A; }
+  .sidebar__nav a.active { background: rgba(168,105,79,0.25); }
+</style>
+</head>
+<body data-page="add-event.html">
+
+<div class="app">
+  <aside class="sidebar" id="sidebar-mount"></aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div class="topbar__title">
+        <span class="eyebrow">Special Events Portal</span>
+        <h1>Add to Calendar</h1>
+      </div>
+      <div class="topbar__meta">
+        <span class="sync-badge">Synced to Google Calendar</span><br>
+        <strong>events@dettesvcs.com</strong><br>
+        <span class="small muted">All times shown in event local time</span>
+      </div>
+    </div>
+
+    <div class="grid-2" style="grid-template-columns: 1.2fr 1fr;">
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Create New Event</h2>
+        </div>
+
+        <form onsubmit="event.preventDefault(); showToast('Event added to calendar'); setTimeout(() => { document.querySelectorAll('input, select, textarea').forEach(el => el.value = ''); }, 500); return false;">
+          <label for="event-name">Event Name</label>
+          <input type="text" id="event-name" placeholder="e.g., Corporate Gala" required>
+
+          <label for="event-date">Date</label>
+          <input type="date" id="event-date" required>
+
+          <label for="event-time">Time</label>
+          <input type="time" id="event-time" required>
+
+          <label for="event-location">Location</label>
+          <input type="text" id="event-location" placeholder="City, Venue name" required>
+
+          <label for="event-category">Category</label>
+          <select id="event-category" required>
+            <option value="">Select a category</option>
+            <option value="venue">Venue</option>
+            <option value="catering">Catering</option>
+            <option value="planning">Planning</option>
+            <option value="coordination">Coordination</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="event-description">Description</label>
+          <textarea id="event-description" placeholder="Add details about this event..." rows="4"></textarea>
+
+          <div class="flex-between" style="gap: 12px; margin-top: 24px;">
+            <a href="dashboard.html" class="btn btn--ghost" style="flex:1;">Cancel</a>
+            <button type="submit" class="btn btn--accent" style="flex:1;">Add Event</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <h2 style="font-size:16px;">Recent Events</h2>
+          <span class="tag">This month</span>
+        </div>
+
+        <div class="event-row" style="padding: 10px 0;">
+          <div class="event-row__date">10<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Venue site visit</h3>
+            <p><span class="chip chip--special">Venue</span></p>
+          </div>
+        </div>
+
+        <div class="event-row" style="padding: 10px 0;">
+          <div class="event-row__date">15<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Catering tasting</h3>
+            <p><span class="chip chip--special">Catering</span></p>
+          </div>
+        </div>
+
+        <div class="event-row" style="padding: 10px 0;">
+          <div class="event-row__date">24<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Logistics meeting</h3>
+            <p><span class="chip chip--special">Planning</span></p>
+          </div>
+        </div>
+
+        <hr class="hr" style="margin: 16px 0;">
+        <a href="dashboard.html" class="btn btn--ghost" style="width:100%;">Back to calendar</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

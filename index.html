@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — D'Ette Services</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <aside class="auth-aside">
+    <div>
+      <span class="eyebrow">D'Ette Services</span>
+      <div class="wordmark">Special Events</div>
+      <p class="tagline">Manage and coordinate your special events with ease.</p>
+    </div>
+    <div class="foot">Demo build · Prototype</div>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-form">
+      <span class="eyebrow">Special Events Portal</span>
+      <h1>Sign in</h1>
+      <p class="sub">Enter your credentials to access your event dashboard.</p>
+
+      <form onsubmit="event.preventDefault(); window.location.href='dashboard.html'; return false;">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+
+        <button type="submit" class="btn" style="width:100%;">Sign in</button>
+      </form>
+
+      <p style="text-align:center; margin-top:24px; font-size:13px; color:var(--mute);">
+        Demo access — click Sign in to continue
+      </p>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
