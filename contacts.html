@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Contacts — D'Ette Services</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .sidebar { background: #141E2E; }
+  .sidebar__brand .wordmark { font-size: 20px; }
+  .sidebar__brand .eyebrow { color: #A09060; }
+  .sidebar__nav a .num { color: #A09060; }
+  .sidebar__nav a.active { background: rgba(160,144,96,0.25); }
+</style>
+</head>
+<body data-page="contacts.html">
+
+<div class="app">
+  <aside class="sidebar" id="sidebar-mount"></aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div class="topbar__title">
+        <span class="eyebrow">Special Events Portal · Step 03</span>
+        <h1>Event Contacts</h1>
+      </div>
+      <div class="topbar__meta">
+        <span class="sync-badge">Synced to Google Calendar</span><br>
+        <strong>ms.dette@dettesvcs.com</strong>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>Emergency contacts</h2>
+        <span class="tag">Pre-printed on events calendar</span>
+      </div>
+      <p class="muted small">
+        These numbers appear on the printed 2027 Special Events Calendar's emergency page
+        and are always accessible here in the portal.
+      </p>
+      <div class="grid-3">
+        <div class="contact-card">
+          <span class="role">Emergency</span>
+          <h3>911</h3>
+          <p>Police · Fire · Ambulance</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Directory assistance</span>
+          <h3>411</h3>
+          <p>Local listings</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Poison control</span>
+          <h3>1-800-222-1222</h3>
+          <p>24-hour hotline</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>Event vendor directory</h2>
+        <span class="tag">Your team</span>
+      </div>
+      <p class="muted small">
+        Every vendor on your event team, in one place. Special event contacts only —
+        wedding and real estate contacts are on their own separate portals.
+      </p>
+      <div class="grid-3">
+        <div class="contact-card">
+          <span class="role">Event planner</span>
+          <h3>D'Ette Services</h3>
+          <p>ms.dette@dettesvcs.com</p>
+          <p>(346) 291-7543</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Venue</span>
+          <h3>The Magnolia Ballroom</h3>
+          <p>events@magnoliaballroom.example</p>
+          <p>(713) 555-0110</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Caterer</span>
+          <h3>Riviera Cuisine</h3>
+          <p>info@rivieracuisine.example</p>
+          <p>(713) 555-0133</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Photographer / videographer</span>
+          <h3>Frame & Light Studio</h3>
+          <p>hello@frameandlight.example</p>
+          <p>(713) 555-0155</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Entertainment / DJ</span>
+          <h3>SoundWave Events</h3>
+          <p>book@soundwaveevents.example</p>
+          <p>(713) 555-0177</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Décor & florals</span>
+          <h3>Luxe Events Co.</h3>
+          <p>design@luxeevents.example</p>
+          <p>(713) 555-0199</p>
+        </div>
+        <div class="contact-card editable">
+          <span class="role">Add vendor</span>
+          <h3>+ New contact</h3>
+          <p>Name, role, phone, email</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>Client emergency contacts</h2>
+        <span class="tag">ICE — in case of emergency</span>
+      </div>
+      <p class="muted small">
+        Added by the client — people to contact on their behalf if needed.
+      </p>
+      <div class="grid-3">
+        <div class="contact-card">
+          <span class="role">Primary contact</span>
+          <h3>Jordan Morrison</h3>
+          <p>Event host</p>
+          <p>(713) 555-0211</p>
+        </div>
+        <div class="contact-card">
+          <span class="role">Secondary contact</span>
+          <h3>Alex Morrison</h3>
+          <p>Co-host / family contact</p>
+          <p>(713) 555-0233</p>
+        </div>
+        <div class="contact-card editable">
+          <span class="role">Add contact</span>
+          <h3>+ New ICE contact</h3>
+          <p>Name, relation, phone</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

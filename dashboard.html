@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Events Portal — D'Ette Services</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .sidebar { background: #141E2E; }
+  .sidebar__brand .wordmark { font-size: 20px; }
+  .sidebar__brand .eyebrow { color: #A09060; }
+  .sidebar__nav a .num { color: #A09060; }
+  .sidebar__nav a.active { background: rgba(160,144,96,0.25); }
+</style>
+</head>
+<body data-page="dashboard.html">
+
+<div class="app">
+  <aside class="sidebar" id="sidebar-mount"></aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div class="topbar__title">
+        <span class="eyebrow">Special Events Portal</span>
+        <h1>Your Event Calendar</h1>
+      </div>
+      <div class="topbar__meta">
+        <span class="sync-badge">Synced to Google Calendar</span><br>
+        <strong>ms.dette@dettesvcs.com</strong><br>
+        <span class="small muted">All times shown in client's local time</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- Calendar -->
+      <div class="panel">
+        <div class="panel__head">
+          <h2>June 2026</h2>
+          <span class="se-badge">Special events only</span>
+        </div>
+
+        <div class="cal-grid">
+          <div class="dow">Su</div><div class="dow">Mo</div><div class="dow">Tu</div>
+          <div class="dow">We</div><div class="dow">Th</div><div class="dow">Fr</div><div class="dow">Sa</div>
+
+          <div class="day empty"></div><div class="day empty"></div>
+          <div class="day">1</div><div class="day">2</div><div class="day">3</div>
+          <div class="day">4</div><div class="day">5</div>
+
+          <div class="day">6</div><div class="day">7</div><div class="day">8</div>
+          <div class="day">9</div>
+          <div class="day today">10<span class="dot" style="background:var(--accent)"></span></div>
+          <div class="day">11</div><div class="day">12</div>
+
+          <div class="day">13</div><div class="day">14</div>
+          <div class="day">15</div><div class="day">16</div>
+          <div class="day">17<span class="dot" style="background:var(--accent)"></span></div>
+          <div class="day">18</div><div class="day">19</div>
+
+          <div class="day">20</div><div class="day">21</div>
+          <div class="day">22<span class="dot" style="background:var(--accent)"></span></div>
+          <div class="day">23</div><div class="day">24</div>
+          <div class="day">25</div><div class="day">26</div>
+
+          <div class="day">27</div>
+          <div class="day">28<span class="dot" style="background:var(--accent)"></span></div>
+          <div class="day">29</div><div class="day">30</div>
+          <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+        </div>
+
+        <hr class="hr">
+        <div class="flex-between">
+          <span class="small muted">
+            <span class="chip chip--special">Special events only</span>
+          </span>
+          <a href="add-event.html" class="btn btn--accent">+ Add to calendar</a>
+        </div>
+      </div>
+
+      <!-- Upcoming -->
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Upcoming</h2>
+          <span class="tag">Next 30 days</span>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date">10<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Venue walkthrough — The Magnolia Ballroom</h3>
+            <p><span class="chip chip--special">Venue</span>
+            &nbsp;<span style="font-family:var(--font-mono);font-size:10px;color:var(--mute);">10:00 AM CDT · Houston</span></p>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date">17<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Catering tasting — Riviera Cuisine</h3>
+            <p><span class="chip chip--special">Catering</span>
+            &nbsp;<span style="font-family:var(--font-mono);font-size:10px;color:var(--mute);">12:00 PM CDT · Houston</span></p>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date">22<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Décor consultation — Luxe Events Co.</h3>
+            <p><span class="chip chip--special">Décor</span>
+            &nbsp;<span style="font-family:var(--font-mono);font-size:10px;color:var(--mute);">2:00 PM CDT · Houston</span></p>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date">28<span>JUN</span></div>
+          <div class="event-row__body">
+            <h3>Corporate Gala — Morrison Group</h3>
+            <p><span class="chip chip--special">Gala</span>
+            &nbsp;<span style="font-family:var(--font-mono);font-size:10px;color:var(--mute);">6:00 PM CDT · Houston</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Quick links -->
+    <div class="grid-3" style="margin-top:24px;">
+      <div class="panel" style="margin-top:0;">
+        <div class="panel__head">
+          <h2 style="font-size:16px;">Event Contacts</h2>
+          <span class="tag">Vendors & ICE</span>
+        </div>
+        <p class="muted small">Your venue, caterer, entertainment, décor, and emergency contacts.</p>
+        <a href="contacts.html" class="btn btn--ghost" style="width:100%;margin-top:8px;">Open contacts</a>
+      </div>
+      <div class="panel" style="margin-top:0;">
+        <div class="panel__head">
+          <h2 style="font-size:16px;">2027 Events Calendar</h2>
+          <span class="tag">Pre-order</span>
+        </div>
+        <p class="muted small">Order your personalised 2027 special events calendar — wall or desk format.</p>
+        <a href="shop.html" class="btn btn--ghost" style="width:100%;margin-top:8px;">Order now</a>
+      </div>
+      <div class="panel" style="margin-top:0;">
+        <div class="panel__head">
+          <h2 style="font-size:16px;">Event Merch</h2>
+          <span class="tag">Made to order</span>
+        </div>
+        <p class="muted small">Personalised event keepsakes and branded items with your photo and event date.</p>
+        <a href="shop.html" class="btn btn--ghost" style="width:100%;margin-top:8px;">Visit shop</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

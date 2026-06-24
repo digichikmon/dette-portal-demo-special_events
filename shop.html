@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Special Events Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .sidebar { background: #141E2E; }
+  .sidebar__brand .wordmark { font-size: 20px; }
+  .sidebar__brand .eyebrow { color: #A09060; }
+  .sidebar__nav a .num { color: #A09060; }
+  .sidebar__nav a.active { background: rgba(160,144,96,0.25); }
+</style>
+</head>
+<body data-page="shop.html">
+
+<div class="app">
+  <aside class="sidebar" id="sidebar-mount"></aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div class="topbar__title">
+        <span class="eyebrow">Special Events Portal · Step 04</span>
+        <h1>Shop</h1>
+      </div>
+      <div class="topbar__meta">
+        <span class="sync-badge">Synced to Google Calendar</span><br>
+        <strong>ms.dette@dettesvcs.com</strong>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>2027 Special Events Calendar</h2>
+        <span class="tag">Pre-order · Ships October 2026</span>
+      </div>
+      <p class="muted small">
+        Wall and desk formats. One flat price. Emergency / ICE page included.
+        Special event content only — never mixed with weddings or real estate.
+      </p>
+      <div class="grid-3">
+        <div class="product-card">
+          <div class="product-card__media">Wall · Special Events 2027</div>
+          <div class="product-card__body">
+            <h3>Special Events Wall Calendar</h3>
+            <p>12 months · writing lines · QR code · ICE page</p>
+            <div class="flex-between">
+              <span class="product-card__price">$—.00</span>
+              <button class="btn btn--ghost"
+                onclick="showToast('Added — 2027 Special Events Wall Calendar')">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__media">Desk · Special Events 2027</div>
+          <div class="product-card__body">
+            <h3>Special Events Desk Calendar</h3>
+            <p>12 months · writing lines · QR code · ICE page</p>
+            <div class="flex-between">
+              <span class="product-card__price">$—.00</span>
+              <button class="btn btn--ghost"
+                onclick="showToast('Added — 2027 Special Events Desk Calendar')">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__media">White-label · 2027</div>
+          <div class="product-card__body">
+            <h3>White-label Calendar</h3>
+            <p>Same design · your name + logo swapped in · ~2 week turnaround</p>
+            <div class="flex-between">
+              <span class="product-card__price">$—.00</span>
+              <button class="btn btn--ghost"
+                onclick="showToast('Request sent — White-label Calendar')">Request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <h2>Event Keepsakes & Merch</h2>
+        <span class="tag">Made to order</span>
+      </div>
+      <p class="muted small">
+        Personalised keepsakes for your special event — custom photo tees, framed prints,
+        and branded items. Photo submitted by client, background removed, proof sent for
+        approval, then produced.
+      </p>
+      <div class="grid-3">
+        <div class="product-card">
+          <div class="product-card__media">Custom Event Tee</div>
+          <div class="product-card__body">
+            <h3>Personalised Event Tee</h3>
+            <p>Front: event logo or photo · Back: date + custom saying</p>
+            <div class="flex-between">
+              <span class="product-card__price">$—.00</span>
+              <button class="btn btn--ghost"
+                onclick="showToast('Added — Personalised Event Tee')">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__media">Framed Event Print</div>
+          <div class="product-card__body">
+            <h3>Framed Keepsake Print</h3>
+            <p>Event photo + date · custom layout · multiple sizes</p>
+            <div class="flex-between">
+              <span class="product-card__price">$—.00</span>
+              <button class="btn btn--ghost"
+                onclick="showToast('Added — Framed Keepsake Print')">Add</button>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__media">Branded Item</div>
+          <div class="product-card__body">
+            <h3>Custom Branded Item</h3>
+            <p>Your event logo · sophisticated layout · multiple options</p>
+            <div class="flex-between">
+              <span class="product-card__price">$—.00</span>
+              <button class="btn btn--ghost"
+                onclick="showToast('Added — Custom Branded Item')">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="hr">
+      <p class="small muted">
+        Photo submitted by client → background removed → proof sent for approval
+        → signed off → produced. Logo placement handled by Dom Design Studio.
+      </p>
+    </div>
+
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

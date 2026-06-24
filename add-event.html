@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add to Calendar — Special Events Portal</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .sidebar { background: #141E2E; }
+  .sidebar__brand .wordmark { font-size: 20px; }
+  .sidebar__brand .eyebrow { color: #A09060; }
+  .sidebar__nav a .num { color: #A09060; }
+  .sidebar__nav a.active { background: rgba(160,144,96,0.25); }
+</style>
+</head>
+<body data-page="add-event.html">
+
+<div class="app">
+  <aside class="sidebar" id="sidebar-mount"></aside>
+
+  <main class="main">
+
+    <div class="topbar">
+      <div class="topbar__title">
+        <span class="eyebrow">Special Events Portal · Step 02</span>
+        <h1>Add to Calendar</h1>
+      </div>
+      <div class="topbar__meta">
+        <span class="sync-badge">Synced to Google Calendar</span><br>
+        <strong>ms.dette@dettesvcs.com</strong>
+      </div>
+    </div>
+
+    <div class="grid-2">
+
+      <div class="panel">
+        <div class="panel__head">
+          <h2>New event entry</h2>
+          <span class="tag">Special events only</span>
+        </div>
+
+        <form onsubmit="return false;">
+
+          <label for="ev-category">Activity type</label>
+          <select id="ev-category">
+            <option>Corporate gala</option>
+            <option>Birthday celebration</option>
+            <option>Anniversary party</option>
+            <option>Graduation party</option>
+            <option>Holiday party</option>
+            <option>Fundraiser / charity event</option>
+            <option>Product launch</option>
+            <option>Award ceremony</option>
+            <option>Retirement party</option>
+            <option>Baby shower</option>
+            <option>Bridal shower</option>
+            <option>Rehearsal dinner</option>
+            <option>Venue walkthrough</option>
+            <option>Catering tasting</option>
+            <option>Décor consultation</option>
+            <option>Entertainment / DJ meeting</option>
+            <option>Photography session</option>
+            <option>Other special event</option>
+          </select>
+
+          <label for="ev-title">Title / notes</label>
+          <input type="text" id="ev-title" placeholder="e.g. Corporate Gala — Morrison Group"
+                 value="Corporate Gala — Morrison Group">
+
+          <div class="field-row">
+            <div>
+              <label for="ev-date">Date</label>
+              <input type="date" id="ev-date" value="2026-07-12">
+            </div>
+            <div>
+              <label for="ev-time">Time</label>
+              <input type="time" id="ev-time" value="18:00">
+            </div>
+          </div>
+
+          <label for="ev-tz">Client's timezone</label>
+          <select id="ev-tz" onchange="updateTzPreview()">
+            <option value="America/Chicago">Central Time — Houston, Chicago</option>
+            <option value="America/New_York">Eastern Time — New York, Miami</option>
+            <option value="America/Denver">Mountain Time — Denver, Phoenix</option>
+            <option value="America/Los_Angeles">Pacific Time — Los Angeles, Seattle</option>
+            <option value="Europe/London">London (GMT/BST)</option>
+            <option value="Europe/Paris">Paris / Rome / Madrid (CET)</option>
+            <option value="Asia/Dubai">Dubai (GST)</option>
+            <option value="Asia/Riyadh">Riyadh (AST)</option>
+            <option value="Asia/Kolkata">Mumbai / Delhi (IST)</option>
+            <option value="Asia/Tokyo">Tokyo (JST)</option>
+            <option value="Australia/Sydney">Sydney (AEST)</option>
+          </select>
+
+          <div class="tz-preview" id="tz-preview">
+            <strong>Synced to client's local time:</strong><br>
+            Event will show as <strong>6:00 PM</strong> for the client in
+            <strong>Houston (Central Time)</strong> —
+            automatically converted if you are in a different timezone.
+          </div>
+
+          <label for="ev-client">Client / organisation name</label>
+          <input type="text" id="ev-client" placeholder="e.g. Morrison Group"
+                 value="Morrison Group">
+
+          <label for="ev-notes">Notes</label>
+          <textarea id="ev-notes" rows="2"
+                    placeholder="Anything the team should know">Black-tie dress code. Guest count: 180. Preferred colour palette: navy and gold.</textarea>
+
+          <button type="button" class="btn btn--accent" style="width:100%;"
+                  onclick="submitEvent()">
+            Add to calendar
+          </button>
+
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <h2>What happens next</h2>
+          <span class="tag">Behind the scenes</span>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date"
+               style="font-size:15px;font-family:var(--font-mono);color:var(--ink);">1</div>
+          <div class="event-row__body">
+            <h3>Activity tagged — special events only</h3>
+            <p>Only special event activities are accepted here. Wedding and real estate
+               activities are handled on their own separate portals.</p>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date"
+               style="font-size:15px;font-family:var(--font-mono);color:var(--ink);">2</div>
+          <div class="event-row__body">
+            <h3>Time synced to client's local timezone</h3>
+            <p>A client in Houston sees Houston time. A client in Dubai sees Dubai time.
+               No manual conversion needed on either end.</p>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date"
+               style="font-size:15px;font-family:var(--font-mono);color:var(--ink);">3</div>
+          <div class="event-row__body">
+            <h3>Synced to your Google Calendar</h3>
+            <p>The entry appears on Ms. D'Ette's own Google Calendar automatically,
+               already tagged and sorted — no re-entry needed.</p>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-row__date"
+               style="font-size:15px;font-family:var(--font-mono);color:var(--ink);">4</div>
+          <div class="event-row__body">
+            <h3>Confirmation sent to client</h3>
+            <p>The client receives a summary with the date, time in their local timezone,
+               and the activity details.</p>
+          </div>
+        </div>
+
+        <hr class="hr">
+        <p class="small muted">
+          In this prototype, "Add to calendar" triggers a confirmation toast only.
+          Timezone conversion and Google Calendar sync would be wired in the real build.
+        </p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+const TZ_LABELS = {
+  "America/Chicago":     "Houston / Chicago (Central Time)",
+  "America/New_York":    "New York (Eastern Time)",
+  "America/Denver":      "Denver (Mountain Time)",
+  "America/Los_Angeles": "Los Angeles (Pacific Time)",
+  "Europe/London":       "London (GMT/BST)",
+  "Europe/Paris":        "Paris / Rome (CET)",
+  "Asia/Dubai":          "Dubai (GST)",
+  "Asia/Riyadh":         "Riyadh (AST)",
+  "Asia/Kolkata":        "Mumbai / Delhi (IST)",
+  "Asia/Tokyo":          "Tokyo (JST)",
+  "Australia/Sydney":    "Sydney (AEST)",
+};
+
+function updateTzPreview() {
+  const tz   = document.getElementById("ev-tz").value;
+  const time = document.getElementById("ev-time").value || "18:00";
+  const [h, m] = time.split(":").map(Number);
+  const ampm = h >= 12 ? "PM" : "AM";
+  const h12  = h % 12 === 0 ? 12 : h % 12;
+  const timeStr = `${h12}:${String(m).padStart(2,"0")} ${ampm}`;
+  document.getElementById("tz-preview").innerHTML =
+    `<strong>Synced to client's local time:</strong><br>
+     Event will show as <strong>${timeStr}</strong> for the client in
+     <strong>${TZ_LABELS[tz] || tz}</strong> —
+     automatically converted if you are in a different timezone.`;
+}
+
+function submitEvent() {
+  const cat    = document.getElementById("ev-category").value;
+  const client = document.getElementById("ev-client").value || "the client";
+  const tz     = TZ_LABELS[document.getElementById("ev-tz").value] || "";
+  showToast(`"${cat}" added for ${client} · synced to ${tz}`);
+}
+</script>
+
+</body>
+</html>

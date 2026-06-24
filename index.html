@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D'Ette Services — Special Events Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-page">
+
+  <aside class="auth-aside">
+    <div>
+      <span class="eyebrow">D'Ette Services · Special Events Portal</span>
+      <div class="wordmark">D'Ette</div>
+      <p class="tagline">
+        Your special events — corporate galas, birthday celebrations, anniversaries,
+        and more — scheduled, confirmed, and synced to your own calendar.
+      </p>
+    </div>
+    <div class="foot">Demo build · Dom Design Studio · Not for production use</div>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-form">
+
+      <div class="auth-toggle">
+        <a href="#" class="active" id="tab-login">Sign in</a>
+        <a href="#" id="tab-register">Create account</a>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="form-login">
+        <span class="eyebrow">Welcome back</span>
+        <h1>Sign in</h1>
+        <p class="sub">Access your event calendar, your contacts, and your orders.</p>
+
+        <form onsubmit="return false;">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="you@email.com" value="ms.dette@dettesvcs.com">
+
+          <label for="login-pass">Password</label>
+          <input type="password" id="login-pass" placeholder="••••••••" value="••••••••">
+
+          <label for="login-role">Sign in as</label>
+          <select id="login-role">
+            <option>Special event client</option>
+            <option>Wedding client</option>
+            <option>Real estate client</option>
+            <option>Vendor / partner</option>
+          </select>
+
+          <button class="btn" style="width:100%" onclick="signIn()">
+            Sign in
+          </button>
+        </form>
+
+        <p class="small muted" style="margin-top:18px;">
+          This is a prototype — any details will sign you in to the demo dashboard.
+        </p>
+      </div>
+
+      <!-- REGISTER (hidden by default) -->
+      <div id="form-register" style="display:none;">
+        <span class="eyebrow">New here</span>
+        <h1>Create your account</h1>
+        <p class="sub">Verification keeps the calendar private to people you've invited.</p>
+
+        <form onsubmit="return false;">
+          <div class="field-row">
+            <div>
+              <label for="reg-first">First name</label>
+              <input type="text" id="reg-first" placeholder="First name">
+            </div>
+            <div>
+              <label for="reg-last">Last name</label>
+              <input type="text" id="reg-last" placeholder="Last name">
+            </div>
+          </div>
+
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="you@email.com">
+
+          <label for="reg-role">I'm joining as</label>
+          <select id="reg-role">
+            <option>Special event client</option>
+            <option>Wedding client</option>
+            <option>Real estate client</option>
+            <option>Vendor / partner</option>
+          </select>
+
+          <button class="btn" style="width:100%" onclick="createAccount()">
+            Create account
+          </button>
+        </form>
+
+        <p class="small muted" style="margin-top:18px;">
+          A verification step would sit here in the live build — kept open for the demo.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<script>
+  function signIn() {
+    window.location.href = 'dashboard.html';
+  }
+  function createAccount() {
+    window.location.href = 'dashboard.html';
+  }
+
+  document.getElementById('tab-login').addEventListener('click', function(e){
+    e.preventDefault();
+    this.classList.add('active');
+    document.getElementById('tab-register').classList.remove('active');
+    document.getElementById('form-login').style.display = 'block';
+    document.getElementById('form-register').style.display = 'none';
+  });
+  document.getElementById('tab-register').addEventListener('click', function(e){
+    e.preventDefault();
+    this.classList.add('active');
+    document.getElementById('tab-login').classList.remove('active');
+    document.getElementById('form-register').style.display = 'block';
+    document.getElementById('form-login').style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
