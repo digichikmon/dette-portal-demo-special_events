@@ -30,7 +30,7 @@
   .sidebar__nav a.active { background: rgba(168,105,79,0.25); }
 </style>
 </head>
-<body data-page="special-events/dashboard.html">
+<body data-page="dashboard.html">
 
 <div class="app">
   <aside class="sidebar" id="sidebar-mount"></aside>
@@ -174,34 +174,6 @@
 
 <script src="js/app.js"></script>
 <script>
-const PAGE_NAV_ITEMS = [
-  { num: "01", label: "Dashboard",       href: "dashboard.html" },
-  { num: "02", label: "Add to calendar", href: "add-event.html" },
-  { num: "03", label: "Event contacts",  href: "emergency.html" },
-  { num: "04", label: "Shop",            href: "shop.html" },
-];
-function renderSidebar(activeHref) {
-  const mount = document.getElementById("sidebar-mount");
-  if (!mount) return;
-  const links = PAGE_NAV_ITEMS.map(item => {
-    const active = item.href === activeHref ? " active" : "";
-    return `<a href="${item.href}" class="${active.trim()}">
-              <span class="num">${item.num}</span>
-              <span>${item.label}</span>
-            </a>`;
-  }).join("");
-  mount.innerHTML = `
-    <div class="sidebar__brand">
-      <span class="eyebrow">D'Ette Services</span>
-      <div class="wordmark">Special Events</div>
-    </div>
-    <nav class="sidebar__nav">${links}
-      <a href="index.html" style="margin-top:auto;opacity:0.5;">
-        <span class="num">↩</span><span>Sign out</span>
-      </a>
-    </nav>
-    <div class="sidebar__foot">Demo build · Prototype</div>`;
-}
 document.addEventListener("DOMContentLoaded", () => renderSidebar("dashboard.html"));
 </script>
 

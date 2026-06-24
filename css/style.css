@@ -742,12 +742,6 @@ input:focus, select:focus, textarea:focus {
 
 /* ---- Special Events portal theme ---- */
 
-.special-events-theme .sidebar { background: #2A1A18; }
-.special-events-theme .sidebar__brand .wordmark { font-size: 22px; }
-.special-events-theme .sidebar__brand .eyebrow { color: #C49A8A; }
-.special-events-theme .sidebar__nav a .num { color: #C49A8A; }
-.special-events-theme .sidebar__nav a.active { background: rgba(168,105,79,0.25); }
-
 .special-events-badge {
   display: inline-flex;
   align-items: center;
