@@ -55,7 +55,7 @@
     { role:"Poison control", name:"1-800-222-1222", desc:"24-hour hotline" }
   ];
   var VENDORS = [
-    { role:"Event planner", name:"D'Ette Services", l1:"ms.dette@dettesvcs.com", l2:"(346) 291-7543" },
+    { role:"Event planner", name:"D'Ette Services", l1:"text@example.com", l2:"(555) 555-5555" },
     { role:"Venue", name:"The Magnolia Ballroom", l1:"events@magnoliaballroom.example", l2:"(713) 555-0110" },
     { role:"Caterer", name:"Riviera Cuisine", l1:"info@rivieracuisine.example", l2:"(713) 555-0133" },
     { role:"Photographer / videographer", name:"Frame & Light Studio", l1:"hello@frameandlight.example", l2:"(713) 555-0155" },
@@ -183,7 +183,7 @@
       '<span class="eyebrow">Welcome back</span>' +
       '<h1>Sign in</h1>' +
       '<p class="sub">Access your event calendar, contacts, and orders.</p>' +
-      '<label>Email</label><input type="email" value="ms.dette@dettesvcs.com">' +
+      '<label>Email</label><input type="email" value="text@example.com">' +
       '<label>Password</label><input type="password" value="password">' +
       '<label>Sign in as</label>' +
       '<select><option>Special event client</option><option>Wedding client</option><option>Real estate client</option><option>Vendor / partner</option></select>' +
@@ -242,7 +242,7 @@
             '<div><span class="eyebrow">' + esc(t[0]) + '</span><h1>' + esc(t[1]) + '</h1></div>' +
             '<div class="topbar__meta">' +
               '<span class="sync-badge">Synced to Google Calendar</span><br>' +
-              '<strong>ms.dette@dettesvcs.com</strong><br>' +
+              '<strong>text@example.com</strong><br>' +
               '<span>All times in client\'s local time</span>' +
             '</div>' +
           '</div>' +
